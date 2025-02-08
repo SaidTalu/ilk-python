@@ -4,6 +4,9 @@ tas = "taş"
 kagit ="kağıt"
 makas = "makas"
 cikis= "çıkış"
+computer = 0
+user = 0
+
 while True: 
     cevap = input(str("Taş,Kağıt,Makas,çıkış  =   "))
 
@@ -11,40 +14,47 @@ while True:
         degerler = (tas,kagit,makas)
         rastgele_secim = random.choice(degerler)
         print("Bende",rastgele_secim,"diyorum")
-        
         if cevap == tas    and    rastgele_secim == tas:
             print("Berabere")
 
         elif cevap == tas    and    rastgele_secim == kagit:
             print("Kazandım")
+            computer = computer +1
 
         elif cevap == tas    and    rastgele_secim == makas:
             print("Yenildim")
-
+            user += 1
         elif cevap == makas    and    rastgele_secim == makas:
             print("Berabere")
 
         elif cevap == makas    and    rastgele_secim == tas:
             print("Kazandım")
-
+            computer = computer +1
         elif cevap == makas    and    rastgele_secim == kagit:
             print("Yenildim")
-
+            user += 1
         elif cevap == kagit    and    rastgele_secim == kagit:
             print("Berabere")
 
-
         elif cevap == kagit    and    rastgele_secim == makas:
             print("Kazandım")
-
+            computer = computer +1
         else:# cevap == kagit    and    rastgele_secim == tas:
             print("Yenildim")
+            user += 1
+
+       
+        print("-"*50)
+        print("    SKOR TABLOSU")
+        print("Bilgisayar : ", computer,  "\t\t Kullanıcı : ", user)
+        print("-"*50)
+
     elif cevap == cikis:
         break
     else:
         print("Lütfen geçerli bir anahtar kelime giriniz")
         print("Sadece taş kağıt makas veya çıkış kelimelerini kullanabilirsiniz")
     
-
-
+    if computer ==3 or user == 3:
+        break
 
