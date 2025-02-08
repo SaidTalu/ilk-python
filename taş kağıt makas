@@ -6,8 +6,7 @@ makas = "makas"
 cikis= "çıkış"
 computer = 0
 user = 0
-
-while True: 
+while computer < 2 or user < 2: 
     cevap = input(str("Taş,Kağıt,Makas,çıkış  =   "))
 
     if cevap == tas or cevap == kagit or cevap == makas:
@@ -55,6 +54,15 @@ while True:
         print("Lütfen geçerli bir anahtar kelime giriniz")
         print("Sadece taş kağıt makas veya çıkış kelimelerini kullanabilirsiniz")
     
-    if computer ==3 or user == 3:
-        break
+else:
+    print("The Game has finished, thanks for playing")
 
+   
+if computer > user:
+    print("Ben kazandım")
+
+elif user > computer:
+    print("Sen kazandın")
+
+else:
+    print("Pes mi ettin")
