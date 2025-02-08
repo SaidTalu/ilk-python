@@ -1,0 +1,50 @@
+import random
+
+tas = "taş"
+kagit ="kağıt"
+makas = "makas"
+cikis= "çıkış"
+while True: 
+    cevap = input(str("Taş,Kağıt,Makas,çıkış  =   "))
+
+    if cevap == tas or cevap == kagit or cevap == makas:
+        degerler = (tas,kagit,makas)
+        rastgele_secim = random.choice(degerler)
+        print("Bende",rastgele_secim,"diyorum")
+        
+        if cevap == tas    and    rastgele_secim == tas:
+            print("Berabere")
+
+        elif cevap == tas    and    rastgele_secim == kagit:
+            print("Kazandım")
+
+        elif cevap == tas    and    rastgele_secim == makas:
+            print("Yenildim")
+
+        elif cevap == makas    and    rastgele_secim == makas:
+            print("Berabere")
+
+        elif cevap == makas    and    rastgele_secim == tas:
+            print("Kazandım")
+
+        elif cevap == makas    and    rastgele_secim == kagit:
+            print("Yenildim")
+
+        elif cevap == kagit    and    rastgele_secim == kagit:
+            print("Berabere")
+
+
+        elif cevap == kagit    and    rastgele_secim == makas:
+            print("Kazandım")
+
+        else:# cevap == kagit    and    rastgele_secim == tas:
+            print("Yenildim")
+    elif cevap == cikis:
+        break
+    else:
+        print("Lütfen geçerli bir anahtar kelime giriniz")
+        print("Sadece taş kağıt makas veya çıkış kelimelerini kullanabilirsiniz")
+    
+
+
+
