@@ -1,0 +1,16 @@
+q = input("En sevdiğiniz kitap türü nedir (Fantastik, Aksiyon, Polisiye, Dram)? ")
+
+if q == "fantastik":
+    print("Sana 'Harry Potter' öneriyorum")
+
+elif q == "aksiyon":
+    print("Sana 'Robin Hood' öneriyorum")
+
+elif q == "polisiye":
+    print("Sana 'Sherlock Holmes'öneriyorum")
+
+elif q == "dram":
+    print("Sana 'Dokuzuncu Hariciye Koğuşu'öneriyorum")
+
+else:
+    print("Lütfen yukarıda yazan türlerden bir tanesini giriniz")
